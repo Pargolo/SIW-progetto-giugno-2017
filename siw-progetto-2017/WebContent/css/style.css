@@ -2,6 +2,17 @@ body {
 	background-color: #f9a19a;
 }
 
+.nav-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.nav-item { 
+	display: inline-block;
+}
+
 .w3-button:hover {
 	color: white!important;
 	background-color: #f77b72!important;
@@ -18,15 +29,4 @@ img:hover {
 
 #opera {
 	opacity: 1;
-}
-
-.nav-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
-
-.nav-item { 
-	display: inline-block;
 }
