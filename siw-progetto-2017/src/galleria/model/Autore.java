@@ -16,7 +16,7 @@ public class Autore {
 	private String nazionalita;
 	private Date dataNascita;
 	private Date dataMorte;
-	private Set<Quadro> quadri;
+	private Set<Opera> opere;
 	
 	public Autore() {}
 
@@ -60,12 +60,12 @@ public class Autore {
 		this.dataMorte = dataMorte;
 	}
 
-	public Set<Quadro> getQuadri() {
-		return quadri;
+	public Set<Opera> getOpere() {
+		return opere;
 	}
 
-	public void setQuadri(Set<Quadro> quadri) {
-		this.quadri = quadri;
+	public void setOpere(Set<Opera> opere) {
+		this.opere = opere;
 	}
 	
 	@Override
@@ -78,11 +78,11 @@ public class Autore {
 	
 	@Override
 	public boolean equals(Object obj) {
-		Autore a = (Autore)obj;
-		return this.getNome().equals(a.getNome()) &&
-				this.getCognome().equals(a.getCognome()) &&
-				this.getNazionalita().equals(a.getNazionalita()) &&
-				this.getDataNascita().equals(a.getDataNascita());
+		Autore autore = (Autore)obj;
+		return this.getNome().equals(autore.getNome()) &&
+				this.getCognome().equals(autore.getCognome()) &&
+				this.getNazionalita().equals(autore.getNazionalita()) &&
+				this.getDataNascita().equals(autore.getDataNascita());
 	}
 
 }

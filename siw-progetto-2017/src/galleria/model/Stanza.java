@@ -3,13 +3,13 @@ package galleria.model;
 import java.util.List;
 
 /**
- * La classe Stanza rappresenta una stanza in cui sono esposti dei quadri.
+ * La classe Stanza rappresenta una stanza in cui sono esposte delle opere.
  *
  */
 public class Stanza {
 	private String nome;
 	private String descrizione;
-	private List<Quadro> quadri;
+	private List<Opera> opere;
 	
 	public Stanza() {}
 
@@ -29,12 +29,12 @@ public class Stanza {
 		this.descrizione = descrizione;
 	}
 
-	public List<Quadro> getQuadri() {
-		return quadri;
+	public List<Opera> getOpere() {
+		return opere;
 	}
 
-	public void setQuadri(List<Quadro> quadri) {
-		this.quadri = quadri;
+	public void setOpere(List<Opera> opere) {
+		this.opere = opere;
 	}
 	
 	@Override
@@ -44,8 +44,8 @@ public class Stanza {
 	
 	@Override
 	public boolean equals(Object obj) {
-		Stanza s = (Stanza)obj;
-		return this.getNome().equals(s.getNome());
+		Stanza stanza = (Stanza)obj;
+		return this.getNome().equals(stanza.getNome());
 	}
 
 }
