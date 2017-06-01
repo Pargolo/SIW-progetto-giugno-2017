@@ -5,15 +5,15 @@ import java.util.Set;
 
 /**
  * La classe Autore rappresenta un autore di un opera d'arte.<br>
- * Un Autore ha un nome, un cognome, una nazionalità, una data di nascita,
- * una data di morte (la quale potrebbe essere indefinita).
+ * Un Autore ha un nome e un cognome, la nazionalità, la data di nascita,
+ * la data di morte (la quale potrebbe essere indefinita).
  * Un Autore conosce anche tutte le opere che ha realizzato.
  *
  */
 public class Autore {
 	private String nome;
 	private String cognome;
-	private String nazionalità;
+	private String nazionalita;
 	private Date dataNascita;
 	private Date dataMorte;
 	private Set<Quadro> quadri;
@@ -36,12 +36,12 @@ public class Autore {
 		this.cognome = cognome;
 	}
 
-	public String getNazionalità() {
-		return nazionalità;
+	public String getNazionalita() {
+		return nazionalita;
 	}
 
-	public void setNazionalità(String nazionalità) {
-		this.nazionalità = nazionalità;
+	public void setNazionalita(String nazionalita) {
+		this.nazionalita = nazionalita;
 	}
 
 	public Date getDataNascita() {
@@ -72,7 +72,7 @@ public class Autore {
 	public int hashCode() {
 		return this.getNome().hashCode() +
 				this.getCognome().hashCode() +
-				this.getNazionalità().hashCode() +
+				this.getNazionalita().hashCode() +
 				this.getDataNascita().hashCode();
 	}
 	
@@ -81,7 +81,7 @@ public class Autore {
 		Autore a = (Autore)obj;
 		return this.getNome().equals(a.getNome()) &&
 				this.getCognome().equals(a.getCognome()) &&
-				this.getNazionalità().equals(a.getNazionalità()) &&
+				this.getNazionalita().equals(a.getNazionalita()) &&
 				this.getDataNascita().equals(a.getDataNascita());
 	}
 
