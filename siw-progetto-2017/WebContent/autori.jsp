@@ -12,7 +12,7 @@
 		<nav class = "w3-bar w3-red">
 			<ul class = "nav-list">
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Home </a> </li>
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Contatti </a> </li>
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Stanze </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Quadri </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Autori </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Contatti </a> </li>

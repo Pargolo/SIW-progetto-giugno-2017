@@ -8,7 +8,16 @@ body {
 }
 
 img {
-	width: 99%;
+	width: 100%;
+	opacity: 0.8;
+}
+
+img:hover {
+	opacity: 1;
+}
+
+#opera {
+	opacity: 1;
 }
 
 .nav-list {

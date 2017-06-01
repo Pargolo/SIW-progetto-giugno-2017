@@ -4,14 +4,20 @@
 	<head>
 		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
 		<link rel = "stylesheet" href = "css/style.css">
-		<title> Informazioni autore </title>
+		<title> Informazioni opera </title>
+		<script type="text/javascript">
+			function copia(elemento) {
+				var img = document.getElementById("opera");
+				img.src = elemento.src;
+			}
+		</script>
 	</head>
 	<body>
 		<header> <h1> Galleria </h1> </header>
 		<nav class = "w3-bar w3-red">
 			<ul class = "nav-list">
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Home </a> </li>
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Stanze </a> </li>
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Stanza </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Quadri </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Autori </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Contatti </a> </li>
@@ -19,20 +25,17 @@
 		</nav>
 		<div class = "container" style = "padding-left: 20%; padding-right: 20%;">
 			<div class = "w3-row">
-				<div class = "w3-half"> <img src = "img/autore-sconosciuto.jpg" alt = "Autore sconosciuto">
-					Immagine (opzionale) dell'autore
+				<div class = "w3-half"> <img id = "opera" src = "img/autore-sconosciuto.jpg" alt = "Opera sconosciuta">
 				</div>
-				<div class = "w3-half">
-					Informazioni autore
+				<div id ="info" class = "w3-half">
+					<h1> Descrizione opera </h1>
 				</div>
-
 			</div>
-			<div>
-				<ul>
-					<c:forEach var = "opera" items = "opere">
-						<li> <a href = "controller?id=${opera.id}"> ${opera.titolo} (${opera.artista.cognome}) </a> </li>
-					</c:forEach>
-				</ul>
+			<div class = "w3-row">
+				<div class = "w3-quarter"> <img src = "img/marco-asciugamano.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img src = "img/matteo-good.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img src = "img/pino.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img src = "img/porco-russo.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
 			</div>
 		</div>
 		<footer class = "w3-bar w3-red" style = "text-align: center;">
