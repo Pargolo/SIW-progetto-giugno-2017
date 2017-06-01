@@ -3,15 +3,20 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
+		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
+		<link rel = "stylesheet" href = "css/style.css">
 		<title> Elenco autori </title>
 	</head>
 	<body>
-		<nav>
-			<form action = "controller" method = "get">
-				<input type = "submit" name = "comando" value = "home"/>
-				<input type = "submit" name = "comando" value = "artisti"/>
-				<input type = "submit" name = "comando" value = "opere"/>
-			</form>
+		<header> <h1> Galleria </h1> </header>
+		<nav class = "w3-bar w3-red">
+			<ul class = "nav-list">
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Home </a> </li>
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Contatti </a> </li>
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Quadri </a> </li>
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Autori </a> </li>
+				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "layout.html"> Contatti </a> </li>
+			</ul>
 		</nav>
 		<div>
 			<ul>
@@ -20,9 +25,9 @@
 				</c:forEach>
 			</ul>
 		</div>
-		<footer>
+		<footer class = "w3-bar w3-red" style = "text-align: center;">
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-			<p> Design by &diams; Matteo&diams; &amp; &clubs; Marco&clubs; </p>
+			<p> Design by <a href = "layout.html"> Matteo Petruzziello</a> &amp; <a href = "layout.html"> Marco Peroni </a> </p>
 		</footer>
 	</body>
 </html>
