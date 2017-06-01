@@ -19,8 +19,8 @@
 		</nav>
 		<div>
 			<ul>
-				<c:forEach var = "autore" items = "autori">
-					<li> <a href = "controller?id=${autore.id}"> ${autore.nome} ${autore.cognome} </a> </li>
+				<c:forEach var = "autore" items = "${autori}">
+					<li> <a href = "autore"> ${autore.nome} ${autore.cognome} </a> </li>
 				</c:forEach>
 			</ul>
 		</div>
