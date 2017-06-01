@@ -1,0 +1,23 @@
+body {
+	background-color: #f9a19a;
+}
+
+.w3-button:hover {
+	color: white!important;
+	background-color: #f77b72!important;
+}
+
+img {
+	width: 100%;
+}
+
+.nav-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.nav-item { 
+	display: inline-block;
+}
