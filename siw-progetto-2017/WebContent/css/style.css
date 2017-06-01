@@ -2,15 +2,6 @@ body {
 	background-color: #f9a19a;
 }
 
-.w3-button:hover {
-	color: white!important;
-	background-color: #f77b72!important;
-}
-
-img {
-	width: 99%;
-}
-
 .nav-list {
 	margin: 0;
 	padding: 0;
@@ -20,4 +11,22 @@ img {
 
 .nav-item { 
 	display: inline-block;
+}
+
+.w3-button:hover {
+	color: white!important;
+	background-color: #f77b72!important;
+}
+
+img {
+	width: 100%;
+	opacity: 0.8;
+}
+
+img:hover {
+	opacity: 1;
+}
+
+#opera {
+	opacity: 1;
 }
