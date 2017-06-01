@@ -20,7 +20,7 @@
 		<div>
 			<ul>
 				<c:forEach var = "autore" items = "autori">
-					<li> <a href = "controller?id=${artista.id}"> ${artista.nome} ${artista.cognome} </a> </li>
+					<li> <a href = "controller?id=${autore.id}"> ${autore.nome} ${autore.cognome} </a> </li>
 				</c:forEach>
 			</ul>
 		</div>
