@@ -3,19 +3,19 @@ package galleria.model;
 import java.awt.Dimension;
 
 /**
- * La classe Quadro rappresenta un'opera d'arte.<br>
- * Un Quadro ha un titolo, l'anno di creazione, la tecnica di pittura
- * con cui è stato realizzato, le sue dimensioni e l'autore che lo ha realizzato.
+ * La classe Opera rappresenta un'opera d'arte.<br>
+ * Un'Opera ha un titolo, l'anno di creazione, la tecnica di 
+ * realizzazione, le sue dimensioni e l'autore che lo ha realizzato.
  * 
  */
-public class Quadro {
+public class Opera {
 	private String titolo;
 	private Integer anno;
 	private String tecnica;
 	private Dimension dimensioni;
 	private Autore autore;
 
-	public Quadro() {}
+	public Opera() {}
 
 	public String getTitolo() {
 		return titolo;
@@ -66,10 +66,10 @@ public class Quadro {
 	
 	@Override
 	public boolean equals(Object obj) {
-		Quadro q = (Quadro)obj;
-		return this.getTitolo().equals(q.getTitolo()) &&
-				this.getAnno().equals(q.getAnno()) &&
-				this.getTecnica().equals(q.getTecnica());
+		Opera opera = (Opera)obj;
+		return this.getTitolo().equals(opera.getTitolo()) &&
+				this.getAnno().equals(opera.getAnno()) &&
+				this.getTecnica().equals(opera.getTecnica());
 	}
 
 }
