@@ -1,5 +1,14 @@
 body {
-	background-color: #f9a19a;
+	background-color: #cdc1c5;
+}
+
+.w3-bar {
+	background-color: #cdc0b0;
+}
+
+.container {
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 .nav-list {
@@ -15,7 +24,11 @@ body {
 
 .w3-button:hover {
 	color: white!important;
-	background-color: #f77b72!important;
+	background-color: #eedfcc!important;
+}
+
+input[type="text"] {
+	width: 100%;
 }
 
 img {
@@ -29,4 +42,9 @@ img:hover {
 
 #opera {
 	opacity: 1;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
 }

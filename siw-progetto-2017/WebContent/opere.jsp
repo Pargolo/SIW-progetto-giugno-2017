@@ -8,7 +8,7 @@
 		<title> Elenco opere </title>
 	</head>
 	<body>
-		<nav class = "w3-bar w3-red">
+		<nav class = "w3-bar">
 			<ul class = "nav-list">
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "index.html"> Home </a> </li>
 				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "stanza"> Stanze </a> </li>
@@ -24,9 +24,9 @@
 				</c:forEach>
 			</ul>
 		</div>
-		<footer class = "w3-bar w3-red" style = "text-align: center;">
+		<footer class = "w3-bar" style = "text-align: center;">
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-			<p> Design by <a href = "layout.html"> Matteo Petruzziello</a> &amp; <a href = "layout.html"> Marco Peroni </a> </p>
+			<p> Design by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
 		</footer>
 	</body>
 </html>

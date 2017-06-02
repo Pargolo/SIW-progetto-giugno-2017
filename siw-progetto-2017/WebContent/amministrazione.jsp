@@ -5,12 +5,8 @@
 		<meta charset = "utf-8">
 		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
 		<link rel = "stylesheet" href = "css/style.css">
-		<title> Informazioni opera </title>
-		<script type="text/javascript">
-			function copia(elemento) {
-				document.getElementById("opera").setAttribute("src", elemento.src);
-			}
-		</script>
+		<script src = "js/amministrazione.js"></script>
+		<title> Amministrazione Galleria </title>
 	</head>
 	<body>
 		<nav class = "w3-bar">
@@ -23,19 +19,26 @@
 			</ul>
 		</nav>
 		<div class = "container">
-			<div class = "w3-row">
-				<div class = "w3-half"> <img id = "opera" src = "img/autore-sconosciuto.jpg" alt = "Opera sconosciuta">
+			<form>
+				<div style = "text-align: center;">
+					<button type="button" onclick = "impostaFormAutore();"> Inserisci nuovo autore </button>
+					<button type="button" onclick = "impostaFormOpera();"> Inserisci nuova opera </button>
 				</div>
-				<div id ="info" class = "w3-half">
-					<h1> Descrizione opera </h1>
+				<div> <label> Parametro </label> </div>
+				<div> <input type = "text" name = "parametro" placeholder = "parametro"> </div>
+				<div> <label> Parametro </label> </div>
+				<div> <input type = "text" name = "parametro" placeholder = "parametro"> </div>
+				<div> <label> Parametro </label> </div>
+				<div> <input type = "text" name = "parametro" placeholder = "parametro"> </div>
+				<div> <label> Parametro </label> </div>
+				<div> <input type = "text" name = "parametro" placeholder = "parametro"> </div>
+				<div> <label> Parametro </label> </div>
+				<div> <input type = "text" name = "parametro" placeholder = "parametro"> </div>
+				<div style = "text-align: center;">
+					<input type = "submit" name = "invia" value = "invia">
+					<input type = "reset" value = "ripristina">
 				</div>
-			</div>
-			<div class = "w3-row">
-				<div class = "w3-quarter"> <img src = "img/marco-asciugamano.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-				<div class = "w3-quarter"> <img src = "img/matteo-good.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-				<div class = "w3-quarter"> <img src = "img/pino.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-				<div class = "w3-quarter"> <img src = "img/porco-russo.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-			</div>
+			</form>
 		</div>
 		<footer class = "w3-bar" style = "text-align: center;">
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
