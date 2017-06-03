@@ -13,39 +13,44 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import galleria.model.Autore;
-import galleria.service.AutoreService;
+import galleria.model.Opera;
+import galleria.service.OperaService;
 
-@WebServlet("/autore")
-public class AutoreController extends HttpServlet {
+@WebServlet("/opera")
+public class OperaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nextPage;
-//		AutoreService service = new AutoreService();
+		OperaService service = new OperaService();
 		
 		if (request.getParameter("id") != null) {
 			// TODO
-			nextPage = "/autore.jsp";
+			nextPage = "/opera.jsp";
 		} else {
-//			List<Autore> autori = service.getAutori();
-			// temporaneo disaccoppiamento con le classi di persistenza
-			List<Autore> autori = new ArrayList<>();
+//			List<Opera> opere = service.getOpere();
+			// temporaneo disaccoppiamento dalla persistenza
+			List<Opera> opere = new ArrayList<>();
 			
-			/* TEST lista autori */
+			/* TEST lista opere */
 				Autore picasso = new Autore();
-				picasso.setNome("Pablo");
 				picasso.setCognome("Picasso");
+				Opera guernica = new Opera();
+				guernica.setTitolo("Guernica");
+				guernica.setAutore(picasso);
 				
 				Autore munch = new Autore();
-				munch.setNome("Edward");
 				munch.setCognome("Munch");
+				Opera urlo = new Opera();
+				urlo.setTitolo("L'urlo");
+				urlo.setAutore(munch);
 				
-				autori.add(picasso);
-				autori.add(munch);
+				opere.add(guernica);
+				opere.add(urlo);
 			
-			request.setAttribute("autori", autori);
-			nextPage = "/autori.jsp";
+			request.setAttribute("opere", opere);
+			nextPage = "/opere.jsp";
 		}
 		
 		ServletContext application = this.getServletContext();

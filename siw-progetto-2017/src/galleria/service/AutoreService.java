@@ -29,15 +29,6 @@ public class AutoreService {
 		return autoreEntity;
 	}
 	
-	public List<Autore> getAutori() {
-		EntityTransaction tx = this.em.getTransaction();
-		tx.begin();
-		List<Autore> autori = this.repository.findAll();
-		tx.commit();
-		
-		return autori;
-	}
-	
 	public Autore getOneAutore(Long id) {
 		EntityTransaction tx = this.em.getTransaction();
 		tx.begin();
@@ -47,6 +38,15 @@ public class AutoreService {
 		return autore;
 	}
 	
+	public List<Autore> getAutori() {
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		List<Autore> autori = this.repository.findAll();
+		tx.commit();
+		
+		return autori;
+	}
+	
 	public void removeAutore(Autore autore) {
 		EntityTransaction tx = this.em.getTransaction();
 		tx.begin();
@@ -54,7 +54,7 @@ public class AutoreService {
 		tx.commit();
 	}
 	
-	public void removeAutoreByID(Long id) {
+	public void removeAutoreById(Long id) {
 		EntityTransaction tx = this.em.getTransaction();
 		tx.begin();
 		Autore autore = this.repository.findOne(id);
