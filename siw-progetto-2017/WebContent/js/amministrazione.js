@@ -10,6 +10,9 @@ function impostaFormAutore() {
 	for(i = 0; i < inputs.length; i++) {
 		labels[i].innerHTML = inputs[i].placeholder;
 	}
+
+	var form = document.getElementsByTagName("form")[0];
+	form.action = "autore";
 }
 
 function impostaFormOpera() {
@@ -24,4 +27,7 @@ function impostaFormOpera() {
 	for(i = 0; i < inputs.length; i++) {
 		labels[i].innerHTML = inputs[i].placeholder;
 	}
+
+	var form = document.getElementsByTagName("form")[0];
+	form.action = "opera";
 }
