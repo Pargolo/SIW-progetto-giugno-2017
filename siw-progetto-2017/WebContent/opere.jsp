@@ -12,7 +12,7 @@
 	<body>
 		<nav class = "navbar navbar-default navbar-fixed-top">
 			<div class = "container-fluid">
-				<div class = "navbar-header"> <a class = "navbar-brand" href = "#"> Galleria </a> </div>
+				<div class = "navbar-header"> <a class = "navbar-brand" href = "index.html"> Galleria </a> </div>
 				<div class = "collapse navbar-collapse">
 					<ul class = "nav navbar-nav">
 						<li> <a href = "index.html"> Home </a> </li>
@@ -32,7 +32,7 @@
 		<div>
 			<ul>
 				<c:forEach var = "opera" items = "${opere}">
-					<li> <a href = "opera"> ${opera.titolo} (${opera.artista.cognome}) </a> </li>
+					<li> <a href = "opera"> ${opera.titolo} (${opera.autore.cognome}) </a> </li>
 				</c:forEach>
 			</ul>
 		<footer>
