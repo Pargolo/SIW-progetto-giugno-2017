@@ -8,14 +8,19 @@
 		<title> Elenco autori </title>
 	</head>
 	<body>
-		<nav class = "w3-bar">
-			<ul class = "nav-list">
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "index.html"> Home </a> </li>
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "stanza"> Stanze </a> </li>
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "opera"> Opere </a> </li>
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "autore"> Autori </a> </li>
-				<li class = "nav-item"> <a class = "w3-bar-item w3-button" href = "contatti.html"> Contatti </a> </li>
-			</ul>
+		<nav class = "navbar navbar-default navbar-fixed-top">
+			<div class = "container-fluid">
+				<div class = "navbar-header"> <a class = "navbar-brand" href = "#"> Galleria </a> </div>
+				<div class = "collapse navbar-collapse">
+					<ul class = "nav navbar-nav">
+						<li> <a href = "index.html"> Home </a> </li>
+						<li> <a href = "stanza"> Stanze </a> </li>
+						<li> <a href = "opera"> Opere </a> </li>
+						<li> <a href = "autore"> Autori </a> </li>
+						<li> <a href = "contatti.html"> Contatti </a> </li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 		<div>
 			<ul>
@@ -24,7 +29,7 @@
 				</c:forEach>
 			</ul>
 		</div>
-		<footer class = "w3-bar" style = "text-align: center;">
+		<footer>
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
 			<p> Design by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
 		</footer>

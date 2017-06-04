@@ -32,8 +32,8 @@
 				<button type = "button" onclick = "impostaFormAutore()"> Inserisci nuovo autore </button>
 				<button type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
 			</div>
-			<form>
-				<div class = "form-group" action = "autore" method = "post">
+			<form action = "autore" method = "post">
+				<div class = "form-group">
 					<label> Nome </label>
 					<input class = "form-control" type = "text" name = "nome" placeholder = "Nome">
 				</div>
