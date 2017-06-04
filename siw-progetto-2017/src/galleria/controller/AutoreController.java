@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import galleria.model.Autore;
+import galleria.service.AutoreService;
 
 @WebServlet("/autore")
 public class AutoreController extends HttpServlet {
@@ -21,19 +22,31 @@ public class AutoreController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nextPage;
-		List<Autore> autori = new ArrayList<>();
+//		AutoreService service = new AutoreService();
 		
-		Autore a1 = new Autore();
-		a1.setNome("Niholas");
-		a1.setCognome("Tucci");
-		Autore a2 = new Autore();
-		a2.setNome("Jhonattan");
-		a2.setCognome("Loza");
-		autori.add(a1);
-		autori.add(a2);
-		
-		request.setAttribute("autori", autori);
-		nextPage = "/autori.jsp";
+		if (request.getParameter("id") != null) {
+			// TODO
+			nextPage = "/autore.jsp";
+		} else {
+//			List<Autore> autori = service.getAutori();
+			// temporaneo disaccoppiamento con le classi di persistenza
+			List<Autore> autori = new ArrayList<>();
+			
+			/* TEST lista autori */
+				Autore picasso = new Autore();
+				picasso.setNome("Pablo");
+				picasso.setCognome("Picasso");
+				
+				Autore munch = new Autore();
+				munch.setNome("Edward");
+				munch.setCognome("Munch");
+				
+				autori.add(picasso);
+				autori.add(munch);
+			
+			request.setAttribute("autori", autori);
+			nextPage = "/autori.jsp";
+		}
 		
 		ServletContext application = this.getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
