@@ -21,9 +21,11 @@
 						<li> <a href = "autore"> Autori </a> </li>
 						<li> <a href = "contatti.html"> Contatti </a> </li>
 					</ul>
-					<ul class = "nav navbar-nav navbar-right">
-						<li> <a href = "#"> <span class = "glyphicon glyphicon-log-out"> </span> Logout amministratore </a> </li>
-					</ul>
+					<div class = "nav navbar-nav navbar-right" id = "form-container">
+						<div class = "navbar-form">
+							<button class = "form-control"> <i class = "glyphicon glyphicon-log-out"> </i> Logout amministratore </button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -61,7 +63,7 @@
 		</div>
 		<footer>
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-			<p> Design by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
+			<p> Powered and designed by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
 		</footer>
 	</body>
 </html>
