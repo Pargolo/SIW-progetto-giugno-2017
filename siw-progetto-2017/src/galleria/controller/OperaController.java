@@ -21,13 +21,15 @@ public class OperaController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nextPage;
-		OperaService service = new OperaService();
+		OperaService operaService = new OperaService();
 		
 		if (request.getParameter("id") != null) {
-			// TODO
+			Long id = Long.valueOf(request.getParameter("id"));
+			Opera opera = operaService.getOneOpera(id);
+			request.setAttribute("opera", opera);
 			nextPage = "/opera.jsp";
 		} else {
-			List<Opera> opere = service.getOpere();
+			List<Opera> opere = operaService.getOpere();
 			request.setAttribute("opere", opere);
 			nextPage = "/opere.jsp";
 		}

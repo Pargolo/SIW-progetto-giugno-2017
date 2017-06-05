@@ -21,13 +21,15 @@ public class AutoreController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nextPage;
-		AutoreService service = new AutoreService();
+		AutoreService autoreService = new AutoreService();
 		
 		if (request.getParameter("id") != null) {
-			// TODO
+			Long id = Long.valueOf(request.getParameter("id"));
+			Autore autore = autoreService.getOneAutore(id);
+			request.setAttribute("autore", autore);
 			nextPage = "/autore.jsp";
 		} else {
-			List<Autore> autori = service.getAutori();
+			List<Autore> autori = autoreService.getAutori();
 			request.setAttribute("autori", autori);
 			nextPage = "/autori.jsp";
 		}
