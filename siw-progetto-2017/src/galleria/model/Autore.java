@@ -1,7 +1,18 @@
 package galleria.model;
 
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * La classe Autore rappresenta un autore di un opera d'arte.<br>
@@ -10,15 +21,41 @@ import java.util.Set;
  * Un Autore conosce anche tutte le opere che ha realizzato.
  *
  */
+@Entity
 public class Autore {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	
+	@Column(nullable=false)
 	private String nome;
+	
+	@Column(nullable=false)
 	private String cognome;
+	
+	@Column(nullable=false)
 	private String nazionalita;
+	
+	@Column(nullable=false)
+	@Temporal(TemporalType.DATE)
 	private Date dataNascita;
+	
+	@Temporal(TemporalType.DATE)
 	private Date dataMorte;
-	private Set<Opera> opere;
+	
+	@OneToMany(mappedBy="autore", fetch=FetchType.LAZY, cascade={CascadeType.REMOVE})
+	private List<Opera> opere;
 	
 	public Autore() {}
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -60,11 +97,11 @@ public class Autore {
 		this.dataMorte = dataMorte;
 	}
 
-	public Set<Opera> getOpere() {
+	public List<Opera> getOpere() {
 		return opere;
 	}
 
-	public void setOpere(Set<Opera> opere) {
+	public void setOpere(List<Opera> opere) {
 		this.opere = opere;
 	}
 	

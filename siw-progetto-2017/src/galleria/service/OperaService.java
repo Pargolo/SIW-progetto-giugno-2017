@@ -2,35 +2,64 @@ package galleria.service;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
 import galleria.model.Opera;
+import galleria.repository.jpa.OperaRepository;
 
 public class OperaService {
+	private EntityManager em;
+	private OperaRepository repository;
 	
 	public OperaService() {
-		// TODO Auto-generated constructor stub
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("galleria-unit");
+		this.em = emf.createEntityManager();
+		this.repository = new OperaRepository(this.em);
 	}
 	
 	public Opera insertOpera(Opera opera) {
-		// TODO
-		return opera;
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		Opera operaEntity = this.repository.save(opera);
+		tx.commit();
+		
+		return operaEntity;
 	}
 	
 	public Opera getOneOpera(Long id) {
-		// TODO
-		return new Opera();
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		Opera opera = this.repository.findOne(id);
+		tx.commit();
+		
+		return opera;
 	}
 	
 	public List<Opera> getOpere() {
-		// TODO
-		return null;
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		List<Opera> opere = this.repository.findAll();
+		tx.commit();
+		
+		return opere;
 	}
 	
 	public void removeOpera(Opera opera) {
-		// TODO
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		this.repository.delete(opera);
+		tx.commit();
 	}
 	
 	public void removeOperaById(Long id) {
-		// TODO
+		EntityTransaction tx = this.em.getTransaction();
+		tx.begin();
+		Opera opera = this.repository.findOne(id);
+		this.repository.delete(opera);
+		tx.commit();
 	}
 
 }

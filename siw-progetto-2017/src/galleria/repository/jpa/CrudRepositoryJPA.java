@@ -1,4 +1,4 @@
-package galleria.persistence.jpa;
+package galleria.repository.jpa;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-import galleria.persistence.CrudRepository;
+import galleria.repository.CrudRepository;
 
 public class CrudRepositoryJPA<T> implements CrudRepository<T> {
 	private EntityManager em;
