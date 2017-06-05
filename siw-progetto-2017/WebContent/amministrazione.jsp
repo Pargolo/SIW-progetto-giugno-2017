@@ -30,11 +30,11 @@
 			</div>
 		</nav>
 		<div class = "container">
-			<div style = "text-align: center">
-				<button type = "button" onclick = "impostaFormAutore()"> Inserisci nuovo autore </button>
-				<button type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
-			</div>
-			<form action = "autore" method = "post">
+			<form id = "inserimento-form" action = "autore" method = "post">		
+				<div class = "form-group form-inline" style = "text-align: center">
+					<button id = "autore-button" class = "form-control" type = "button" onclick = "impostaFormAutore()" disabled> Inserisci nuovo autore </button>
+					<button id = "opera-button" class = "form-control" type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
+				</div>
 				<div class = "form-group">
 					<label> Nome </label>
 					<input class = "form-control" type = "text" name = "nome" placeholder = "Nome">
@@ -55,9 +55,9 @@
 					<label> Data di morte </label>
 					<input class = "form-control" type = "date" name = "dataMorte">
 				</div>
-				<div class = "form-group" style = "text-align: center">
-					<input type = "submit" name = "invia" value = "invia">
-					<input type = "reset" value = "ripristina">
+				<div class = "form-group form-inline" style = "text-align: center">
+					<input class = "form-control" type = "submit" name = "invia" value = "invia">
+					<input class = "form-control" type = "reset" value = "ripristina">
 				</div>
 			</form>
 		</div>
