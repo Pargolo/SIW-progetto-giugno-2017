@@ -1,7 +1,6 @@
 package galleria.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -22,28 +21,13 @@ public class AutoreController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nextPage;
-//		AutoreService service = new AutoreService();
+		AutoreService service = new AutoreService();
 		
 		if (request.getParameter("id") != null) {
 			// TODO
 			nextPage = "/autore.jsp";
 		} else {
-//			List<Autore> autori = service.getAutori();
-			// temporaneo disaccoppiamento con le classi di persistenza
-			List<Autore> autori = new ArrayList<>();
-			
-			/* TEST lista autori */
-				Autore picasso = new Autore();
-				picasso.setNome("Pablo");
-				picasso.setCognome("Picasso");
-				
-				Autore munch = new Autore();
-				munch.setNome("Edward");
-				munch.setCognome("Munch");
-				
-				autori.add(picasso);
-				autori.add(munch);
-			
+			List<Autore> autori = service.getAutori();
 			request.setAttribute("autori", autori);
 			nextPage = "/autori.jsp";
 		}
