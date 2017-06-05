@@ -1,4 +1,4 @@
-package galleria.persistence.jpa;
+package galleria.repository.jpa;
 
 import javax.persistence.EntityManager;
 

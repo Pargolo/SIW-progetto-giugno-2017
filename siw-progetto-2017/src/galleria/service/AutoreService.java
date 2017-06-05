@@ -8,7 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import galleria.model.Autore;
-import galleria.persistence.jpa.AutoreRepository;
+import galleria.repository.jpa.AutoreRepository;
 
 public class AutoreService {
 	private EntityManager em;

@@ -1,4 +1,4 @@
-package galleria.persistence;
+package galleria.repository;
 
 import java.util.List;
 

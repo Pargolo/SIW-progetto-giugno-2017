@@ -2,20 +2,51 @@ package galleria.model;
 
 import java.awt.Dimension;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 /**
  * La classe Opera rappresenta un'opera d'arte.<br>
  * Un'Opera ha un titolo, l'anno di creazione, la tecnica di 
  * realizzazione, le sue dimensioni e l'autore che lo ha realizzato.
  * 
  */
+@Entity
 public class Opera {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	
+	@Column(nullable=false)
 	private String titolo;
+	
+	@Column(nullable=false)
 	private Integer anno;
+	
+	@Column(nullable=false)
 	private String tecnica;
+	
+	@Column(nullable=false)
 	private Dimension dimensioni;
+	
+	@ManyToOne(fetch=FetchType.EAGER)
 	private Autore autore;
 
 	public Opera() {}
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getTitolo() {
 		return titolo;
