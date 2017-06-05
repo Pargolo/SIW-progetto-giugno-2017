@@ -37,16 +37,12 @@ input[type="text"] {
 	width: 100%;
 }
 
-img {
+.opera-img {
 	width: 100%;
 	opacity: 0.8;
 }
 
-img:hover {
-	opacity: 1;
-}
-
-#opera {
+.opera-img {
 	opacity: 1;
 }
 

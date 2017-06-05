@@ -31,22 +31,23 @@
 		</nav>
 		<div class = "container">
 			<div class = "w3-row">
-				<div class = "w3-half"> <img id = "opera" src = "img/autore-sconosciuto.jpg" alt = "Opera sconosciuta">
+				<div class = "w3-half"> <img src = "img/autore-sconosciuto.jpg" alt = "Opera sconosciuta">
 				</div>
 				<div id ="info" class = "w3-half">
 					<h1> Descrizione opera </h1>
 				</div>
 			</div>
 			<div class = "w3-row">
-				<div class = "w3-quarter"> <img src = "img/marco-asciugamano.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-				<div class = "w3-quarter"> <img src = "img/matteo-good.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-				<div class = "w3-quarter"> <img src = "img/pino.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
-				<div class = "w3-quarter"> <img src = "img/porco-russo.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img class = "opera-img" src = "img/marco-asciugamano.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img class = "opera-img" src = "img/matteo-good.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img class = "opera-img" src = "img/pino.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
+				<div class = "w3-quarter"> <img class = "opera-img" src = "img/porco-russo.png" alt = "Opera sconosciuta" onclick = "copia(this)"> </div>
 			</div>
 		</div>
 		<footer>
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
 			<p> Powered and designed by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
+			<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
 		</footer>
 	</body>
 </html>

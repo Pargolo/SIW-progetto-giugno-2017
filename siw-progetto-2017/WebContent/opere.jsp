@@ -38,6 +38,7 @@
 		<footer>
 			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
 			<p> Powered and designed by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
+			<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
 		</footer>
 	</body>
 </html>
