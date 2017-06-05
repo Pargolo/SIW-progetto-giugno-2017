@@ -54,7 +54,7 @@ public class CrudRepositoryJPA<T> implements CrudRepository<T> {
 
 	@Override
 	public List<T> findAll() {
-		TypedQuery<T> query = this.em.createQuery("SELECT e FROM "+ this.getEntityClassName() +"e", this.entityClass);
+		TypedQuery<T> query = this.em.createQuery("SELECT e FROM "+ this.getEntityClassName() +" e", this.entityClass);
 		return query.getResultList();
 	}
 
