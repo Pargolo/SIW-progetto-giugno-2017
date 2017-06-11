@@ -78,17 +78,22 @@ function riempiFormOpera(form) {
 		form.appendChild(div);
 	}
 
-	div = document.createElement("div");
-	div.className = "form-group form-inline";
-	div.style.textAlign = "center";
+	var divEsterno = document.createElement("div");
+	divEsterno.className = "form-group";
 
 	label = document.createElement("label");
 	label.innerHTML = "Dimensioni";
 
-	div.appendChild(label);
+	divEsterno.appendChild(label);
+
+	div = document.createElement("div");
+	div.className = "form-group form-inline";
+
 	div.appendChild(creaInput("form-control", "number", "altezza", "Altezza", null));
 	div.appendChild(creaInput("form-control", "number", "larghezza", "Larghezza", null));
-	form.appendChild(div);
+
+	divEsterno.appendChild(div);
+	form.appendChild(divEsterno);
 
 	div = document.createElement("div");
 	div.className = "form-group";
