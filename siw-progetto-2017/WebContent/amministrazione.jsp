@@ -3,17 +3,25 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 		<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
 		<link rel = "stylesheet" href = "css/style.css">
-		<script src = "js/amministrazione.js"></script>
+		<script src = "js/amministrazione.js" charset = "utf-8"></script>
 		<title> Amministrazione Galleria </title>
 	</head>
 	<body>
 		<nav class = "navbar navbar-default navbar-fixed-top">
 			<div class = "container-fluid">
-				<div class = "navbar-header"> <a class = "navbar-brand" href = "index.html"> Galleria </a> </div>
-				<div class = "collapse navbar-collapse">
+				<div class="navbar-header">
+					<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#galleria-navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class = "navbar-brand" href = "index.html"> Galleria </a>
+				</div>
+				<div class = "collapse navbar-collapse" id = "galleria-navbar">
 					<ul class = "nav navbar-nav">
 						<li> <a href = "index.html"> Home </a> </li>
 						<li> <a href = "stanza"> Stanze </a> </li>
@@ -30,35 +38,11 @@
 			</div>
 		</nav>
 		<div class = "container">
-			<form id = "inserimento-form" action = "autore" method = "post">		
-				<div class = "form-group form-inline" style = "text-align: center">
-					<button id = "autore-button" class = "form-control" type = "button" onclick = "impostaFormAutore()" disabled> Inserisci nuovo autore </button>
-					<button id = "opera-button" class = "form-control" type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
-				</div>
-				<div class = "form-group">
-					<label> Nome </label>
-					<input class = "form-control" type = "text" name = "nome" placeholder = "Nome">
-				</div>
-				<div class = "form-group">
-					<label> Cognome </label>
-					<input class = "form-control" type = "text" name = "cognome" placeholder = "Cognome">
-				</div>
-				<div class = "form-group">
-					<label> Nazionalità </label>
-					<input class = "form-control" type = "text" name = "nazionalita" placeholder = "Nazionalità">
-				</div>
-				<div class = "form-group">
-					<label> Data di nascita </label>
-					<input class = "form-control" type = "date" name = "dataNascita">
-				</div>
-				<div class = "form-group">
-					<label> Data di morte </label>
-					<input class = "form-control" type = "date" name = "dataMorte">
-				</div>
-				<div class = "form-group form-inline" style = "text-align: center">
-					<input class = "form-control" type = "submit" name = "invia" value = "invia">
-					<input class = "form-control" type = "reset" value = "ripristina">
-				</div>
+			<div class = "form-group form-inline" style = "text-align: center">
+				<button id = "autore-button" class = "form-control" type = "button" onclick = "impostaFormAutore()"> Inserisci nuovo autore </button>
+				<button id = "opera-button" class = "form-control" type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
+			</div>
+			<form id = "inserimento-form" action = "autore" method = "post">
 			</form>
 		</div>
 		<footer>

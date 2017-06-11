@@ -3,35 +3,47 @@ function impostaFormAutore() {
 	document.getElementById("opera-button").disabled = false;
 
 	var form = document.getElementById("inserimento-form");
-	var inputs = form.getElementsByTagName("input");
-
-	riempiFormAutore(inputs);
-
-	var labels = document.getElementsByTagName("label");
-	for(i = 0; i < inputs.length; i++) {
-		labels[i].innerHTML = inputs[i].placeholder;
-	}
-
 	form.action = "autore";
+	form.innerHTML = "";
+
+	riempiFormAutore(form);
+	aggiungiSubmitReset(form);
+	
 }
 
-function riempiFormAutore(inputs) {
-	inputs[0].name = "nome";
-	inputs[0].placeholder = "Nome";
 
-	inputs[1].name = "cognome";
-	inputs[1].placeholder = "Cognome";
+function aggiungiSubmitReset(form) {
+	var div = document.createElement("div");
+	div.className = "form-group form-inline";
+	div.style.textAlign = "center";
+	div.appendChild(creaInput("form-control", "submit", "invia", null, "invia"));
+	div.appendChild(creaInput("form-control", "reset", "ripristina", null, "ripristina"));
 
-	inputs[2].name = "nazionalita";
-	inputs[2].placeholder = "Nazionalità";
+	form.appendChild(div);
+}
 
-	inputs[3].name = "dataNascita";
-	inputs[3].placeholder = "Data di nascita";
-	inputs[3].type = "date";
+function riempiFormAutore(form) {
 
-	inputs[4].name = "dataMorte";
-	inputs[4].placeholder = "Data di morte";
-	inputs[4].type = "date";
+	var inputs = [
+		creaInput("form-control", "text", "nome", "Nome", null),
+		creaInput("form-control", "text", "cognome", "Cognome", null),
+		creaInput("form-control", "text", "nazionalita", "Nazionalità", null),
+		creaInput("form-control", "date", "dataNascita", "Data di nascita", null),
+		creaInput("form-control", "date", "dataMorte", "Data di morte", null)
+	];
+
+	for(i = 0; i < inputs.length; i++) {
+		var label = document.createElement("label");
+		label.innerHTML = inputs[i].placeholder;
+
+		var div = document.createElement("div");
+		div.className = "form-group";
+		div.appendChild(label);
+		div.appendChild(inputs[i]);
+
+		form.appendChild(div);
+	}
+
 }
 
 function impostaFormOpera() {
@@ -39,34 +51,67 @@ function impostaFormOpera() {
 	document.getElementById("opera-button").disabled = true;
 
 	var form = document.getElementById("inserimento-form");
-	var inputs = form.getElementsByTagName("input");
+	form.action = "opera";
+	form.innerHTML = "";
 
-	riempiFormOpera(inputs);
-
-	var labels = document.getElementsByTagName("label");
-	for(i = 0; i < inputs.length; i++) {
-		labels[i].innerHTML = inputs[i].placeholder;
-	}
-
-	document.getElementsById("inserimento-form").action = "opera";
+	riempiFormOpera(form);
+	aggiungiSubmitReset(form);
 }
 
-function riempiFormOpera(inputs) {
-	inputs[0].name = "titolo";
-	inputs[0].placeholder = "Titolo";
+function riempiFormOpera(form) {
 
-	inputs[1].name = "anno";
-	inputs[1].placeholder = "Anno di realizzazione";
-	inputs[1].type = "number";
+	var inputs = [
+		creaInput("form-control", "text", "titolo", "Titolo", null),
+		creaInput("form-control", "number", "anno", "Anno di realizzazione", null),
+		creaInput("form-control", "text", "tecnica", "Tecnica", null),
+	];
 
-	inputs[2].name = "tecnica";
-	inputs[2].placeholder = "Tecnica usata";
+	for(i = 0; i < inputs.length; i++) {
+		var label = document.createElement("label");
+		label.innerHTML = inputs[i].placeholder;
 
-	inputs[3].name = "dimensioni";
-	inputs[3].placeholder = "Dimensioni";
-	inputs[3].type = "number";
+		var div = document.createElement("div");
+		div.className = "form-group";
+		div.appendChild(label);
+		div.appendChild(inputs[i]);
 
-	inputs[4].name = "autore";
-	inputs[4].placeholder = "Nome dell'autore";
-	inputs[4].type = "text";
+		form.appendChild(div);
+	}
+
+	div = document.createElement("div");
+	div.className = "form-group form-inline";
+	div.style.textAlign = "center";
+
+	label = document.createElement("label");
+	label.innerHTML = "Dimensioni";
+
+	div.appendChild(label);
+	div.appendChild(creaInput("form-control", "number", "altezza", "Altezza", null));
+	div.appendChild(creaInput("form-control", "number", "larghezza", "Larghezza", null));
+	form.appendChild(div);
+
+	div = document.createElement("div");
+	div.className = "form-group";
+
+	label = document.createElement("label");
+	label.innerHTML = "Autore";
+
+	div.appendChild(label);
+	div.appendChild(creaInput("form-control", "text", "autore", "Autore", null));
+	form.appendChild(div);
+}
+
+function creaInput(className, type, name, placeholder, value) {
+	var input = document.createElement("input");
+	input.className = className;
+	input.type = type;
+	input.name = name;
+
+	if(placeholder != null)
+		input.placeholder = placeholder;
+
+	if(value != null)
+		input.value = value;
+
+	return input;
 }

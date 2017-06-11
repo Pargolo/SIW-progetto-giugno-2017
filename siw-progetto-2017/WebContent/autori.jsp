@@ -6,14 +6,21 @@
 		<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
 		<link rel = "stylesheet" href = "css/style.css">
-		<script src = "js/galleria.js"></script>
+		<script src = "js/galleria.js" charset = "utf-8"></script>
 		<title> Elenco autori </title>
 	</head>
 	<body>
 		<nav class = "navbar navbar-default navbar-fixed-top">
 			<div class = "container-fluid">
-				<div class = "navbar-header"> <a class = "navbar-brand" href = "index.html"> Galleria </a> </div>
-				<div class = "collapse navbar-collapse">
+				<div class="navbar-header">
+					<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#galleria-navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class = "navbar-brand" href = "index.html"> Galleria </a>
+				</div>
+				<div class = "collapse navbar-collapse" id = "galleria-navbar">
 					<ul class = "nav navbar-nav">
 						<li> <a href = "index.html"> Home </a> </li>
 						<li> <a href = "stanza"> Stanze </a> </li>
@@ -32,7 +39,7 @@
 		<div>
 			<ul>
 				<c:forEach var = "autore" items = "${autori}">
-					<li> <a href = "autore"> ${autore.nome} ${autore.cognome} </a> </li>
+					<li> <a href = "autore?id=${autore.id}"> ${autore.nome} ${autore.cognome} </a> </li>
 				</c:forEach>
 			</ul>
 		</div>
