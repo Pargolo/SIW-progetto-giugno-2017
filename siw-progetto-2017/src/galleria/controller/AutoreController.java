@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import galleria.model.Autore;
 import galleria.service.AutoreService;
+import galleria.validator.AutoreValidator;
 
 @WebServlet("/autore")
 public class AutoreController extends HttpServlet {
@@ -33,6 +34,26 @@ public class AutoreController extends HttpServlet {
 			request.setAttribute("autori", autori);
 			nextPage = "/autori.jsp";
 		}
+		
+		ServletContext application = this.getServletContext();
+		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
+		rd.forward(request, response);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nextPage;
+		AutoreService service = new AutoreService();
+		AutoreValidator validator = new AutoreValidator();
+		Autore autore = new Autore();
+		request.setAttribute("autore", autore);
+		
+		if (validator.validate(request)) {
+			service.insertAutore(autore);
+			nextPage = "/autore.jsp";
+		}
+		else
+			nextPage = "/amministrazione.jsp";
 		
 		ServletContext application = this.getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
