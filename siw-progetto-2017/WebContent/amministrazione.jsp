@@ -5,10 +5,10 @@
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 		<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel = "stylesheet" href = "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel = "stylesheet" href = "css/style.css">
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
-		<link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
-		<link rel = "stylesheet" href = "css/style.css">
 		<script src = "js/amministrazione.js" charset = "utf-8"></script>
 		<title> Amministrazione Galleria </title>
 	</head>
@@ -39,18 +39,65 @@
 				</div>
 			</div>
 		</nav>
-		<div class = "container">
-			<div class = "form-group form-inline" style = "text-align: center">
-				<button id = "autore-button" class = "form-control" type = "button" onclick = "impostaFormAutore()"> Inserisci nuovo autore </button>
-				<button id = "opera-button" class = "form-control" type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
+		<div class = "container-fluid">
+			<div class = "row">
+				<div class = "col-xs-4"></div>
+				<div class = "col-xs-4">
+					<div class = "form-group form-inline" style = "text-align: center">
+						<button id = "autore-button" class = "form-control" type = "button" onclick = "impostaFormAutore()"> Inserisci nuovo autore </button>
+						<button id = "opera-button" class = "form-control" type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
+					</div>
+					<form id = "inserimento-form" action = "autore" method = "post">
+					</form>
+				</div>
+				<div class = "col-xs-4"></div>
 			</div>
-			<form id = "inserimento-form" action = "autore" method = "post">
-			</form>
 		</div>
 		<footer>
-			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-			<p> Powered and designed by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
-			<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
+			<div class = "container-fluid">
+				<div class = "row">
+					<div class = "col-xs-2"></div>
+					<div class = "col-xs-3">
+						<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
+					</div>
+					<div class = "col-xs-2"></div>
+					<div class = "col-xs-3">
+						<p> Powered and designed by </p>
+					</div>
+					<div class = "col-xs-2"></div>
+				</div>
+				<div class = "row">
+					<div class = "col-xs-2"></div>
+					<div class = "col-xs-3">
+						<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
+					</div>
+					<div class = "col-xs-2"></div>
+					<div class = "col-xs-3">
+						<div class = "row">
+							<div class = "col-xs-6">
+								<p> <a href = "#"> Matteo Petruzziello</a> </p>
+							</div>
+							<div class = "col-xs-6">
+								<p> <a href = "#"> Marco Peroni </a> </p>
+						</div>
+						<div class = "row">
+							<div class = "col-xs-6">
+								<p>
+									<a href = "https://www.facebook.com/matteo.petruzziello"> <i class = "ion-social-facebook"></i> </a>
+									<a href = "https://github.com/petruz93"> <i class = "ion-social-github"></i> </a>
+								</p>
+							</div>
+							<div class = "col-xs-6">
+								<p>
+									<a href = "https://www.facebook.com/QuelBelPargolo"> <i class = "ion-social-facebook"></i> </a>
+									<a href = "https://github.com/Pargolo"> <i class = "ion-social-github"></i> </a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class = "col-xs-2"></div>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
