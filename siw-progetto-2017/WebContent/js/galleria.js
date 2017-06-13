@@ -16,3 +16,18 @@ function impostaFormLogin() {
 	container.innerHTML = "";
 	container.appendChild(form);
 }
+
+function creaInput(className, type, name, placeholder, value) {
+	var input = document.createElement("input");
+	input.className = className;
+	input.type = type;
+	input.name = name;
+
+	if(placeholder != null)
+		input.placeholder = placeholder;
+
+	if(value != null)
+		input.value = value;
+
+	return input;
+}
