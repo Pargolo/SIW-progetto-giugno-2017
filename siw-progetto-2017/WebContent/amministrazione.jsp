@@ -5,7 +5,7 @@
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 		<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel = "stylesheet" href = "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel = "stylesheet" href = "css/style.css">
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
@@ -17,9 +17,9 @@
 			<div class = "container-fluid">
 				<div class="navbar-header">
 					<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#galleria-navbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>                        
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>                        
 					</button>
 					<a class = "navbar-brand" href = "index.html"> Galleria </a>
 				</div>
@@ -41,8 +41,8 @@
 		</nav>
 		<div class = "container-fluid">
 			<div class = "row">
-				<div class = "col-xs-4"></div>
-				<div class = "col-xs-4">
+				<div class = "col-md-4"></div>
+				<div class = "col-md-4">
 					<div class = "form-group form-inline" style = "text-align: center">
 						<button id = "autore-button" class = "form-control" type = "button" onclick = "impostaFormAutore()"> Inserisci nuovo autore </button>
 						<button id = "opera-button" class = "form-control" type = "button" onclick = "impostaFormOpera()"> Inserisci nuova opera </button>
@@ -50,52 +50,37 @@
 					<form id = "inserimento-form" action = "autore" method = "post">
 					</form>
 				</div>
-				<div class = "col-xs-4"></div>
+				<div class = "col-md-4"></div>
 			</div>
 		</div>
 		<footer>
 			<div class = "container-fluid">
 				<div class = "row">
-					<div class = "col-xs-2"></div>
-					<div class = "col-xs-3">
+					<div class = "col-md-2"></div>
+					<div class = "col-md-4">
 						<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-					</div>
-					<div class = "col-xs-2"></div>
-					<div class = "col-xs-3">
-						<p> Powered and designed by </p>
-					</div>
-					<div class = "col-xs-2"></div>
-				</div>
-				<div class = "row">
-					<div class = "col-xs-2"></div>
-					<div class = "col-xs-3">
 						<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
 					</div>
-					<div class = "col-xs-2"></div>
-					<div class = "col-xs-3">
-						<div class = "row">
-							<div class = "col-xs-6">
-								<p> <a href = "#"> Matteo Petruzziello</a> </p>
-							</div>
-							<div class = "col-xs-6">
-								<p> <a href = "#"> Marco Peroni </a> </p>
-						</div>
-						<div class = "row">
-							<div class = "col-xs-6">
+					<div class = "col-md-4">
+						<p> Powered and designed by </p>
+						<ul style = "font-size: x-large; list-style: none;">
+							<li>
 								<p>
-									<a href = "https://www.facebook.com/matteo.petruzziello"> <i class = "ion-social-facebook"></i> </a>
-									<a href = "https://github.com/petruz93"> <i class = "ion-social-github"></i> </a>
+									<a class = "undecorated-link" href = "#"> Matteo Petruzziello</a>
+									<a class = "undecorated-link" href = "https://www.facebook.com/matteo.petruzziello"> <i class = "fa fa-facebook-square"></i> </a>
+									<a class = "undecorated-link" href = "https://github.com/petruz93"> <i class = "fa fa-github-square"></i> </a>
 								</p>
-							</div>
-							<div class = "col-xs-6">
+							</li>
+							<li>
 								<p>
-									<a href = "https://www.facebook.com/QuelBelPargolo"> <i class = "ion-social-facebook"></i> </a>
-									<a href = "https://github.com/Pargolo"> <i class = "ion-social-github"></i> </a>
-								</p>
-							</div>
-						</div>
+									<a class = "undecorated-link" href = "#"> Marco Peroni </a>
+									<a class = "undecorated-link" href = "https://www.facebook.com/QuelBelPargolo"> <i class = "fa fa-facebook-square"></i> </a>
+									<a class = "undecorated-link" href = "https://github.com/Pargolo"> <i class = "fa fa-github-square"></i> </a>
+								</p>									
+							</li>
+						</ul>
 					</div>
-					<div class = "col-xs-2"></div>
+					<div class = "col-md-2"></div>
 				</div>
 			</div>
 		</footer>
