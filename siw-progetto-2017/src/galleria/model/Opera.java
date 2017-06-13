@@ -79,6 +79,26 @@ public class Opera {
 	public void setDimensioni(Dimension dimensioni) {
 		this.dimensioni = dimensioni;
 	}
+	
+	public void setDimensioni(int altezza, int larghezza) {
+		this.dimensioni.setSize(altezza, larghezza);
+	}
+	
+	public int getAltezza() {
+		return dimensioni.height;
+	}
+	
+	public void setAltezza(int altezza) {
+		this.dimensioni.height = altezza;
+	}
+	
+	public int getLarghezza() {
+		return dimensioni.width;
+	}
+	
+	public void setLarghezza(int larghezza) {
+		this.dimensioni.width = larghezza;
+	}
 
 	public Autore getAutore() {
 		return autore;
