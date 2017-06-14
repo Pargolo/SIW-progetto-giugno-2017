@@ -11,43 +11,6 @@ function impostaFormAutore() {
 	
 }
 
-function creaDiv(className) {
-	var div = document.createElement("div");
-	div.className = className;
-	return div;
-}
-
-function creaLabel(innerHTML) {
-	var label = document.createElement("label");
-	label.innerHTML = innerHTML;
-	return label;
-}
-
-function creaInput(className, type, name, placeholder, value) {
-	var input = document.createElement("input");
-	input.className = className;
-	input.type = type;
-	input.name = name;
-
-	if(placeholder != null)
-		input.placeholder = placeholder;
-
-	if(value != null)
-		input.value = value;
-
-	return input;
-}
-
-function aggiungiSubmitReset(form) {
-	var div = document.createElement("div");
-	div.className = "form-group form-inline";
-	div.style.textAlign = "center";
-	div.appendChild(creaInput("form-control", "submit", "invia", null, "invia"));
-	div.appendChild(creaInput("form-control", "reset", "ripristina", null, "ripristina"));
-
-	form.appendChild(div);
-}
-
 //function riempiFormAutore(form) {
 //
 //	var inputs = [
@@ -173,5 +136,14 @@ function riempiFormOpera(form) {
 
 	div.appendChild(label);
 	div.appendChild(creaInput("form-control", "text", "autore", "Autore", null));
+	form.appendChild(div);
+}
+
+function aggiungiSubmitReset(form) {
+	var div = creaDiv("form-group form-inline");
+	div.style.textAlign = "center";
+	div.appendChild(creaInput("form-control", "submit", "invia", null, "invia"));
+	div.appendChild(creaInput("form-control", "reset", "ripristina", null, "ripristina"));
+
 	form.appendChild(div);
 }

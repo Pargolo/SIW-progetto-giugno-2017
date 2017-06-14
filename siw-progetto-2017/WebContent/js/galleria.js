@@ -4,8 +4,7 @@ function impostaFormLogin() {
 	form.action = "amministratore";
 	form.method = "post";
 
-	var div = document.createElement("div");
-	div.className = "form-group form-inline";
+	var div = creaDiv("form-group form-inline");
 	div.appendChild(creaInput("form-control", "text", "username", "username", null));
 	div.appendChild(creaInput("form-control", "password", "password", "password", null));
 	div.appendChild(creaInput("form-control", "submit", "login", null, "login"));
@@ -15,6 +14,18 @@ function impostaFormLogin() {
 	var container =	document.getElementById("form-container");
 	container.innerHTML = "";
 	container.appendChild(form);
+}
+
+function creaDiv(className) {
+	var div = document.createElement("div");
+	div.className = className;
+	return div;
+}
+
+function creaLabel(innerHTML) {
+	var label = document.createElement("label");
+	label.innerHTML = innerHTML;
+	return label;
 }
 
 function creaInput(className, type, name, placeholder, value) {
