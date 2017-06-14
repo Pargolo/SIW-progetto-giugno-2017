@@ -1,6 +1,6 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
-<html>
+<html lang = "it">
 	<head>
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
@@ -10,6 +10,13 @@
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
 		<script src = "js/amministrazione.js" charset = "utf-8"></script>
+		<script>
+			var nomeError = "${nomeError}";
+			var cognomeError = "${cognomeError}";
+			var nazionalitaError = "${nazionalitaError}";
+			var dataNascitaError = "${dataNascitaError}";
+			var dataMorteError = "${dataMorteError}";
+		</script>
 		<title> Amministrazione Galleria </title>
 	</head>
 	<body>
@@ -58,12 +65,17 @@
 				<div class = "row">
 					<div class = "col-md-2"></div>
 					<div class = "col-md-4">
-						<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-						<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
+						<ul style = "font-size: x-large; list-style: none;">
+							<li> <p> Progetto giugno 2017 </p> </li>
+							<li> <p> Sistemi Informativi su Web </p> </li>
+							<li> <p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p> </li>
+						</ul>
 					</div>
 					<div class = "col-md-4">
-						<p> Powered and designed by </p>
 						<ul style = "font-size: x-large; list-style: none;">
+							<li>
+								<p> Powered and designed by </p>
+							</li>
 							<li>
 								<p>
 									<a class = "undecorated-link" href = "#"> Matteo Petruzziello</a>

@@ -53,9 +53,40 @@
 			</div>
 		</div>
 		<footer>
-			<p> Progetto giugno 2017 - Sistemi Informativi su Web - Università Roma Tre </p>
-			<p> Powered and designed by <a href = "#"> Matteo Petruzziello</a> &amp; <a href = "#"> Marco Peroni </a> </p>
-			<p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p>
+			<div class = "container-fluid">
+				<div class = "row">
+					<div class = "col-md-2"></div>
+					<div class = "col-md-4">
+						<ul style = "font-size: x-large; list-style: none;">
+							<li> <p> Progetto giugno 2017 </p> </li>
+							<li> <p> Sistemi Informativi su Web </p> </li>
+							<li> <p> <a href = "http://informatica.ing.uniroma3.it"> <img src = "img/roma-tre-logo.png" style = "width: auto;"> </a> </p> </li>
+						</ul>
+					</div>
+					<div class = "col-md-4">
+						<ul style = "font-size: x-large; list-style: none;">
+							<li>
+								<p> Powered and designed by </p>
+							</li>
+							<li>
+								<p>
+									<a class = "undecorated-link" href = "#"> Matteo Petruzziello</a>
+									<a class = "undecorated-link" href = "https://www.facebook.com/matteo.petruzziello"> <i class = "fa fa-facebook-square"></i> </a>
+									<a class = "undecorated-link" href = "https://github.com/petruz93"> <i class = "fa fa-github-square"></i> </a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a class = "undecorated-link" href = "#"> Marco Peroni </a>
+									<a class = "undecorated-link" href = "https://www.facebook.com/QuelBelPargolo"> <i class = "fa fa-facebook-square"></i> </a>
+									<a class = "undecorated-link" href = "https://github.com/Pargolo"> <i class = "fa fa-github-square"></i> </a>
+								</p>									
+							</li>
+						</ul>
+					</div>
+					<div class = "col-md-2"></div>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
